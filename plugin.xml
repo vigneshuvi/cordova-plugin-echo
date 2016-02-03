@@ -23,8 +23,8 @@
       </feature>
     </config-file>
 
-    <header-file src="src/ios/UviCordovaEcho.h" target-dir="UviCordovaEcho"/>
-    <source-file src="src/ios/UviCordovaEcho.m" target-dir="UviCordovaEcho"/>
+    <header-file src="src/ios/UviCordovaEcho.h" target-dir="UviEchoPlugin"/>
+    <source-file src="src/ios/UviCordovaEcho.m" target-dir="UviEchoPlugin"/>
   </platform>
 
 </plugin>

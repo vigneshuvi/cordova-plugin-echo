@@ -28,8 +28,8 @@ Edit `www/js/index.js` and add the following code inside `onDeviceReady`
             alert("Error calling Echo Plugin");
         }
 
-       hello.threadFunction("Echo me - thread!!!", success, failure);
-       hello.nonThreadFunction("Echo me - nonthread!!!", success, failure);
+       echo.threadFunction("Echo me - thread!!!", success, failure);
+       echo.nonThreadFunction("Echo me - nonthread!!!", success, failure);
 ```
 
 Install iOS or Android platform
