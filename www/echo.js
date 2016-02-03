@@ -1,7 +1,13 @@
 /*global cordova, module*/
 
 module.exports = {
-    greet: function (name, successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "callbackfunction", "scheduledTimer", [name]);
+
+    threadFunction: function (name, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Echo", "threadFunction", [name]);
+    },
+    
+    nonThreadFunction: function (name, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Echo", "nonThreadFunction", [name]);
     }
+
 };
