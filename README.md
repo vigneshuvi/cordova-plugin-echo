@@ -5,7 +5,7 @@ Simple plugin that helps to echo the message.
 ## Using
 Clone the plugin
 
-    $ git clone https://github.com/don/cordova-plugin-Echo.git
+    $ git clone https://github.com/vigneshuvi/cordova-plugin-Echo.git
 
 Create a new Cordova Project
 
