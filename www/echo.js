@@ -2,10 +2,10 @@
 
 module.exports = {
     threadFunction: function (name, successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "callbackfunction", "threadFunction", [name]);
+        cordova.exec(successCallback, errorCallback, "Echo", "threadFunction", [name]);
     },
 
     nonThreadFunction: function (name, successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "callbackfunction", "nonThreadFunction", [name]);
+        cordova.exec(successCallback, errorCallback, "Echo", "nonThreadFunction", [name]);
     }
 };
