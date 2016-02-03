@@ -1,6 +1,11 @@
 # Cordova Echo Plugin
 
-Simple plugin that helps to echo the message.
+Simple plugin that helps to echo the message for support both iOS and Andriod platforms.
+
+##Two kind of Echo messages plugins.
+
+    1. Thread-safe callback.    
+    2. Non Thread-safe callback.
 
 ## Using
 Clone the plugin
@@ -17,7 +22,7 @@ Install the plugin
     $ cordova plugin add ../cordova-plugin-Echo
     
 
-Edit `www/js/index.js` and add the following code inside `onDeviceReady`
+Edit `www/js/index.js` and add the following code inside `onDeviceReady` and save the file.
 
 ```js
         var success = function(message) {
