@@ -1,6 +1,6 @@
 # Cordova Echo Plugin
 
-Simple Cordova plugin that helps to echo the message for support both iOS and Android platforms.
+Simple Cordova plugin that helps to echo the message and it will support both iOS and Android platforms.
 
 ##Two kind of Echo messages plugins.
 
