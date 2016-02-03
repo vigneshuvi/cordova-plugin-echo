@@ -16,10 +16,14 @@
  * you should make use of a background thread.
  */
 - (void) threadFunction:(CDVInvokedUrlCommand*)command {
+
     [self.commandDelegate runInBackground:^{
+
+        // Get the call back ID and echo argument
         NSString *callbackId = [command callbackId];
         NSString *echoArg = [[command arguments] objectAtIndex:0];
-        CDVPluginResult* result;
+        CDVPluginResult* result = nil;
+        
         // Check command.arguments here.
         if (echoArg != nil && [echoArg length] > 0) {
             result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:scheduleCallback];
@@ -33,9 +37,11 @@
 
 - (void) nonThreadFunction:(CDVInvokedUrlCommand*)command{
 
+    // Get the call back ID and echo argument
     NSString *callbackId  = [command callbackId];
     NSString *echoArg = [[command arguments] objectAtIndex:0];
-    CDVPluginResult* result;
+    CDVPluginResult* result = nil;
+
     // Check command.arguments here.
     if (echoArg != nil && [echoArg length] > 0) {
         result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:scheduleCallback];

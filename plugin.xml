@@ -27,4 +27,15 @@
     <source-file src="src/ios/UviCordovaEcho.m" target-dir="UviEchoPlugin"/>
   </platform>
 
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Echo">
+        <param name="android-package" value="com.plugin.echo.Echo"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/Echo.java" target-dir="src/com/example/plugin/"/>
+  </platform>
+
 </plugin>
