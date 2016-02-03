@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.plugin.echo"
+        version="0.7.0">
+
+  <name>Echo</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/echo.js" target="js/echo.js"/>
+
+  <js-module src="www/echo.js" name="echo">
+    <clobbers target="echo" />
+  </js-module>
+
+  <platform name="ios">
+    
+    <config-file target="config.xml" parent="/widget">
+      <feature name="echo">
+        <param name="ios-package" value="UviCordovaEcho" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/UviCordovaEcho.h" target-dir="UviCordovaEcho"/>
+    <source-file src="src/ios/UviCordovaEcho.m" target-dir="UviCordovaEcho"/>
+  </platform>
+
+</plugin>
