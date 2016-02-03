@@ -1,3 +1,11 @@
+//
+//  UviCordovaEcho.m
+//  UviCordovaEcho
+//
+//  Created by Vignesh on 2/2/16.
+//  Copyright © 2016 Vignesh Uvi. All rights reserved.
+//
+
 #import "UviCordovaEcho.h"
 
 @implementation UviCordovaEcho
@@ -8,25 +16,32 @@
  * you should make use of a background thread.
  */
 - (void) threadFunction:(CDVInvokedUrlCommand*)command {
-    // Check command.arguments here.
     [self.commandDelegate runInBackground:^{
         NSString *callbackId = [command callbackId];
-        NSString *scheduleCallback = [[command arguments] objectAtIndex:0];
-        CDVPluginResult* result = [CDVPluginResult
-                                   resultWithStatus:CDVCommandStatus_OK
-                                   messageAsString:scheduleCallback];
+        NSString *echoArg = [[command arguments] objectAtIndex:0];
+        CDVPluginResult* result;
+        // Check command.arguments here.
+        if (echoArg != nil && [echoArg length] > 0) {
+            result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:scheduleCallback];
+        } else { 
+            result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Echo Argument was null"];
+        }
         
         [self.commandDelegate sendPluginResult:result callbackId:callbackId];
     }];
 }
 
 - (void) nonThreadFunction:(CDVInvokedUrlCommand*)command{
-    // Check command.arguments here.
+
     NSString *callbackId  = [command callbackId];
-    NSString *scheduleCallback  = [[command arguments] objectAtIndex:0];
-    CDVPluginResult* result = [CDVPluginResult
-                               resultWithStatus:CDVCommandStatus_OK
-                               messageAsString:scheduleCallback];
+    NSString *echoArg = [[command arguments] objectAtIndex:0];
+    CDVPluginResult* result;
+    // Check command.arguments here.
+    if (echoArg != nil && [echoArg length] > 0) {
+        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:scheduleCallback];
+    } else { 
+        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Echo Argument was null"];
+    }
     
     [self.commandDelegate sendPluginResult:result callbackId:callbackId];
     

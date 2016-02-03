@@ -36,6 +36,10 @@ Install iOS or Android platform
 
     cordova platform add ios
     cordova platform add android
+
+Build the code 
+
+    cordova build     
     
 Run the code
 
