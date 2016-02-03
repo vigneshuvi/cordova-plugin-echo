@@ -9,7 +9,7 @@ Clone the plugin
 
 Create a new Cordova Project
 
-    $ cordova create echo com.example.echorapp Echo
+    $ cordova create echo com.uviexample.uviechoapp Echo
     
 Install the plugin
 
