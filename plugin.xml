@@ -31,7 +31,7 @@
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="Echo">
-        <param name="android-package" value="com.plugin.echo.Echo"/>
+        <param name="android-package" value="com.example.plugin.Echo"/>
       </feature>
     </config-file>
 
